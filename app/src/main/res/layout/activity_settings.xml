@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.routinj.robot.SettingsActivity">
+
+
+    <TextView
+        android:text="@string/lightsdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/text_Lights" />
+
+    <TextView
+        android:text="@string/neonsdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_Neons"
+        android:layout_below="@+id/radio_Lights"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <RadioGroup
+        android:id="@+id/radio_Neons"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/text_Neons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/text_Neons"
+        android:layout_alignEnd="@+id/text_Neons">
+
+        <RadioButton
+            android:text="@string/on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_NeonOn"
+            android:onClick="onClick"/>
+
+        <RadioButton
+            android:text="@string/off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_NeonOff"
+            android:checked="false"
+            android:onClick="onClick"/>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radio_Lights"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/text_Lights"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:text="@string/on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_LightOn"
+            android:onClick="onClick" />
+
+        <RadioButton
+            android:text="@string/off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_LightOff"
+            android:checked="false"
+            android:onClick="onClick" />
+
+    </RadioGroup>
+
+    <Button
+        android:text="@string/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button_Close"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onClick" />
+
+    <RadioGroup
+        android:id="@+id/radio_NeonsMode"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/text_Neons"
+        android:layout_toRightOf="@+id/radio_Neons"
+        android:layout_toEndOf="@+id/radio_Neons">
+
+        <RadioButton
+            android:text="@string/manual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_NeonManual"
+            android:onClick="onClick" />
+
+        <RadioButton
+            android:text="@string/auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_NeonAuto"
+            android:checked="false"
+            android:onClick="onClick" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:text="@string/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check_Green"
+        android:layout_alignBaseline="@+id/check_Red"
+        android:layout_alignBottom="@+id/check_Red"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick" />
+
+    <CheckBox
+        android:text="@string/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check_Blue"
+        android:layout_alignBaseline="@+id/check_Green"
+        android:layout_alignBottom="@+id/check_Green"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onClick" />
+
+    <TextView
+        android:text="@string/neonscolordesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_NeonsColor"
+        android:layout_below="@+id/radio_Neons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <CheckBox
+        android:text="@string/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check_Red"
+        android:layout_below="@+id/text_NeonsColor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClick" />
+
+    <TextView
+        android:text="@string/cameradesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_Camera"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/check_Red"
+        android:layout_alignRight="@+id/text_Lights"
+        android:layout_alignEnd="@+id/text_Lights" />
+
+    <RadioGroup
+        android:id="@+id/radio_Camera"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/text_Camera"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:text="@string/on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_CameraOn"
+            android:onClick="onClick" />
+
+        <RadioButton
+            android:text="@string/off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_CameraOff"
+            android:checked="false"
+            android:onClick="onClick" />
+
+    </RadioGroup>
+
+    <TextView
+        android:text="@string/speeddesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_Speed"
+        android:layout_below="@+id/radio_Camera"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seek_Speed"
+        android:max="15"
+        android:progress="0"
+        android:maxWidth="500dp"
+        android:minWidth="300dp"
+        android:layout_below="@+id/text_Speed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
